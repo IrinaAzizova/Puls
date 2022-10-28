@@ -1,0 +1,24 @@
+.promo {
+    min-height: 650px;
+    background: url(../../img/promo_bg.jpg);
+    padding: 21px 0 93px;
+    color: #FFFFFF;    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &-content {
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 91px;
+    }
+    &-tittle {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 42px;
+        text-transform: uppercase;
+    }
+}
