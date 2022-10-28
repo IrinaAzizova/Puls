@@ -1,5 +1,7 @@
 @import 'fonts';
 
+$red-color: #C70101;
+
 * {
     box-sizing:border-box;
     margin: 0;
@@ -14,12 +16,20 @@
 }
 
 .btn {
-    background: #C70101;
+    background: $red-color;
     border-radius: 5px;
     color: #fff;
     border: none;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center;  
+    &:hover {
+        box-shadow: -1px -1px #fff,
+         2px 2px #fff;;
+    }
+}
+
+a:hover {
+    text-shadow: 0 3px $red-color;
 }
 
 @import 'blocks/promo-section';
