@@ -1,0 +1,239 @@
+@media (max-width: 1200px) {
+
+    /* __________ main __________ */
+    .container {
+        width: 840px;
+    }
+    .tittle {
+        font-size: 28px;
+    }
+
+    /* _________ promo section _________ */
+    .promo {
+        &__tittle {
+            font-size: 40px;
+        }
+        &__subtittle {
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    /* __________ main __________ */
+    .container {
+        width: 700px;
+    }
+
+    .tittle {
+        font-size: 28px;
+    }
+
+    /* __________ btns __________ */
+    .btn {
+        &_promo {
+            margin-top: 55px;
+            width: 290px;
+            height: 50px;
+            font-size: 15px;
+        }
+    }
+
+    /* __________ header section __________ */
+    .header {
+        &__descr {
+            display: none;
+        }
+        &__logo {
+            width: 200px;
+        }
+        &__call {
+            flex-direction: row;
+        }
+        &__number {
+            margin-right: 40px;
+        }
+    }
+
+    /* __________ promo section _________ */
+    .promo {
+        min-height: 600px;
+        padding: 21px 0 60px;
+        &__tittle {
+            font-size: 35px;
+        }
+        &__subtittle {
+            font-size: 17px;
+        }
+        .benefits {
+            &__item {
+                width: 109px;
+            }
+            &__img {
+                height: 37px;
+            }
+            &__descr {
+                font-size: 12px;
+            }
+        }
+        &__or {
+                font-size: 15px;
+        }
+    }
+
+    /* __________ advantages section __________ */
+    .advantages {
+        padding: 60px 0;
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+        }
+        &__item {
+            width: 50%;
+            margin-top: 30px;
+        }
+        &__tittle {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    /* __________ main __________ */
+    .container {
+        width: 530px;
+    }
+    .tittle {
+        font-size: 23px;
+    }
+    a:hover {
+        text-shadow: none;
+    }
+
+    /* __________ btns __________ */
+    .btn {
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    /* __________ header section __________ */
+    .header {
+        &__logo {
+            width: 150px;
+        }
+        &__number {
+            margin-right: 20px;
+        }
+    }
+    
+    /* __________ promo section _________ */
+    .promo {
+        min-height: 540px;
+        .container {
+            align-items:center;
+        }
+        &__content {
+            margin-top: 60px;
+            width: 80%;
+            align-items: center;
+        }
+        &__tittle {
+            font-size: 30px;
+        }
+    }
+}
+
+
+@media (max-width: 586px) {
+    /* __________ main __________ */
+    .container {
+        width: 90%;
+    }
+    .tittle {
+        font-size: 20px;
+    }
+
+    /* __________ btns __________ */
+    .btn {
+        &_header {
+            width: 140px;
+            height: 29px;
+            font-size: 10px;
+        }
+        &_promo {
+            width: 242px;
+            height: 43px;
+            font-size: 14px;
+        }
+    }
+
+    /* __________ header section __________ */
+    .header {
+        flex-wrap: wrap;
+        &__descr {
+            display: block;
+            width: 60%;
+            font-size: 10px;
+            span {
+                font-size: 15px;
+                margin-top: 0;
+            }
+        }
+        &__logo {
+            width: 30%;
+        }
+        &__call {
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__number {
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 0;
+        }
+    }
+
+    /* __________ promo section _________ */
+    .promo {  
+        &__content {
+            width: 100%;
+        }      
+        &__tittle {
+            font-size: 23px;
+            text-align: center;
+        }
+        &__subtittle {
+            font-size: 10px;
+        }
+        .benefits {
+            width: 100%;
+            &-item {
+                width: 30%;
+            }
+            &__descr {
+                font-size: 10px;
+            }
+        }
+        &__or {
+            font-size: 13px;
+        }
+    }
+
+    /* __________ advantages section __________ */
+    .advantages {
+        &__item {
+            width: 90%;
+        }
+        &__img {
+            font-size: 60px;
+            height: 60px;
+        }
+    }
+}

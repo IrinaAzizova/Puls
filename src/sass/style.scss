@@ -1,6 +1,7 @@
 @import 'fonts';
 
 $red-color: #C70101;
+$black-color: #0D0D0D;
 
 * {
     box-sizing:border-box;
@@ -15,22 +16,22 @@ $red-color: #C70101;
     margin: 0 auto;
 }
 
-.btn {
-    background: $red-color;
-    border-radius: 5px;
-    color: #fff;
-    border: none;
-    text-transform: uppercase;
-    text-align: center;  
-    &:hover {
-        box-shadow: -1px -1px #fff,
-         2px 2px #fff;;
-    }
-}
-
 a:hover {
     text-shadow: 0 3px $red-color;
 }
 
+.tittle {
+    font-weight: 700;
+    font-size: 30px;
+    color: $black-color;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@import 'blocks/btns';
+
 @import 'blocks/promo-section';
 @import 'blocks/header';
+@import 'blocks/advantages-section';
+
+@import 'blocks/media';

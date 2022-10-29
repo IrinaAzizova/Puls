@@ -1,0 +1,25 @@
+.btn {
+    background: $red-color;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;  
+    &:hover {
+        box-shadow: -1px -1px #fff,
+         2px 2px #fff;;
+    }    
+    &_header {
+        margin-top: 4px;
+        width: 153px;
+        height: 32px;
+        font-size: 12px;       
+        line-height: 19px;
+    }
+    &_promo {
+        margin-top: 65px;
+        width: 303px;
+        height: 54px;        
+        font-size: 16px;
+    }
+}
