@@ -2,6 +2,7 @@
 
 $red-color: #C70101;
 $black-color: #0D0D0D;
+$border-radius: 5px;
 
 * {
     box-sizing:border-box;
@@ -26,12 +27,20 @@ a:hover {
     color: $black-color;
     text-transform: uppercase;
     text-align: center;
+    &_white {
+        text-align: left;
+        font-size: 36px;
+        line-height: 54px;
+        color: #FFFFFF;
+    }
 }
 
 @import 'blocks/btns';
+@import 'blocks/forms';
 
 @import 'blocks/promo-section';
 @import 'blocks/header';
 @import 'blocks/advantages-section';
+@import 'blocks/consultation';
 
 @import 'blocks/media';

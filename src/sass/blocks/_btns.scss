@@ -1,6 +1,6 @@
 .btn {
     background: $red-color;
-    border-radius: 5px;
+    border-radius: $border-radius;
     color: #fff;
     border: none;
     text-transform: uppercase;
@@ -20,6 +20,11 @@
         margin-top: 65px;
         width: 303px;
         height: 54px;        
+        font-size: 16px;
+    }
+    &_consultation {
+        margin-top: 5px;
+        height: 55px;
         font-size: 16px;
     }
 }
