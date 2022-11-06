@@ -1,0 +1,22 @@
+.slider-section {
+    min-height: 740px;
+    padding: 81px 0;
+    .itc-slider {
+        &__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 580px;
+        }
+        &__img {
+            display: block;
+            width: 50%;
+        }
+        &__btn {
+            background-color: transparent;
+            color: $red-color;
+        }
+    }
+    
+    
+}

@@ -124,6 +124,21 @@
             line-height: 27px;
         }
     }
+
+    /* __________ slider section __________ */
+    .slider-section {
+        .itc-slider {
+            &__btn {
+                display: none;
+            }
+            &__img {
+                width: 100%;
+            }
+            &__item {
+                min-height: 450px;
+            }
+        }
+    }
 }
 
 
@@ -191,6 +206,17 @@
             font-size: 15px;
             line-height: 22px;
             text-align: center;
+        }
+    }
+    
+    /* __________ slider section __________ */
+     .slider-section {
+        min-height: 550px;
+        padding: 51px 0;
+        .itc-slider {
+            &__item {
+                min-height: 450px;
+            }
         }
     }
 }
@@ -303,5 +329,16 @@
     /* __________ consultation section __________ */
     .consultation {
         padding: 30px 0;
+    }
+    
+    /* __________ slider section __________ */
+     .slider-section {
+        min-height: 490px;
+        padding: 31px 0;
+        .itc-slider {
+            &__item {
+                min-height: 430px;
+            }
+        }
     }
 }
