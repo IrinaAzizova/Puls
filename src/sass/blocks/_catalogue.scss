@@ -37,14 +37,13 @@
         flex-wrap: wrap;
     }
     &-card {
-        width: 31%;
+        width: 301px;
         min-height: 442px;
         border: 2px solid #E8E8E8;
         color: $black-color;
-        margin-top: 19px;           
+        margin: 19px 6px 0;           
         padding: 20px;
         overflow: hidden;
-        margin: 19px 7px 0;
         &__wrapper {
             width: 200%;
             display: flex;
