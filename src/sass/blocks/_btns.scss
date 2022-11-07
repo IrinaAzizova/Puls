@@ -7,7 +7,8 @@
     text-align: center;  
     &:hover {
         box-shadow: -1px -1px #fff,
-         2px 2px #fff;;
+         2px 2px #fff;
+         cursor: pointer;
     }    
     &_header {
         margin-top: 4px;
@@ -26,5 +27,13 @@
         margin-top: 5px;
         height: 55px;
         font-size: 16px;
+    }
+    &_catalogue-card {
+        width: 135px;
+        height: 44px;
+        font-size: 14px;
+        &:hover {
+            box-shadow: 3px 3px 20px $black-color;
+        }
     }
 }

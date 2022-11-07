@@ -18,7 +18,8 @@ $border-radius: 5px;
 }
 
 a:hover {
-    text-shadow: 0 3px $red-color;
+    text-shadow: 0 0 20px $black-color,
+                 0 0 10px #fff;
 }
 
 .tittle {
@@ -33,6 +34,9 @@ a:hover {
         line-height: 54px;
         color: #FFFFFF;
     }
+    &_catalogue {
+        font-weight: 400;
+    }
 }
 
 @import 'blocks/btns';
@@ -42,6 +46,7 @@ a:hover {
 @import 'blocks/header';
 @import 'blocks/advantages-section';
 @import 'blocks/consultation';
-@import 'blocks/_slider-section';
+@import 'blocks/slider-section';
+@import 'blocks/catalogue';
 
 @import 'blocks/media';
