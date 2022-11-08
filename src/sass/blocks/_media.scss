@@ -444,6 +444,7 @@
     .reviews{
         &__item {
             flex-direction: column;
+            margin-top: 40px;
         }
         &__photo {
             margin: 0 auto;
@@ -455,5 +456,23 @@
             text-align: center;
         }
         &__name {margin-top: 20px;}
+    }
+
+    /* __________ footer __________ */
+    .footer {
+        &__info {
+            width: 100%;
+            padding: 30px 5%;
+            min-height: 190px;
+        }
+        &__address {
+            font-size: 16px;
+        }
+        &__tel {
+            margin-top: 20px;
+        }
+        &__social {
+            margin-top: 20px;
+        }
     }
 }
