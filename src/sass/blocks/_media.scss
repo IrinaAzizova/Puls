@@ -44,6 +44,14 @@
             margin: 19px 5px 0;
         }
     }
+
+    /* __________ review section __________ */
+    .reviews{
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 }
 
 
@@ -261,6 +269,32 @@
             margin: 19px 5px 0;
         }
     }
+    
+    /* __________ review section __________ */
+    .reviews{
+        &__photo {
+            width: 100px;
+            height: 100px;
+        }
+        &__item {
+            margin-top: 30px;
+        }
+        &__body {
+            margin-left: 30px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+        &__counter {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 7px;
+        }
+    }
 }
 
 
@@ -404,5 +438,22 @@
             width: 100%;
             margin: 15px 0px 0;
         }
+    }
+
+    /* __________ review section __________ */
+    .reviews{
+        &__item {
+            flex-direction: column;
+        }
+        &__photo {
+            margin: 0 auto;
+        }
+        &__body {
+            margin-left: 0;
+        }
+        &__name, &__counter {
+            text-align: center;
+        }
+        &__name {margin-top: 20px;}
     }
 }
