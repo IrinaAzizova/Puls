@@ -295,6 +295,15 @@
             margin-top: 7px;
         }
     }
+
+     /* __________ footer __________ */
+     .footer {
+        &__round {
+            &:hover {
+                box-shadow: none;
+            }
+        }
+     }
 }
 
 
@@ -473,6 +482,17 @@
         }
         &__social {
             margin-top: 20px;
+        }
+    }
+
+    /* __________ modals __________ */
+    .overlay {
+        .modal {
+            width: 90%;
+            &__close {
+                right: 7px;
+                top: 0;
+            }
         }
     }
 }

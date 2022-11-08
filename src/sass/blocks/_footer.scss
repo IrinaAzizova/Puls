@@ -27,6 +27,7 @@
         color:#fff;
         margin-top: 36px;
         display: block;
+        text-decoration: none;
     }
     &__social {
         width: 212px;
@@ -42,6 +43,10 @@
         justify-content: center;
         align-items:center;
         border: 1px solid #fff;
+        text-decoration: none;
         font-size: 23px;
+        &:hover {
+            box-shadow: 0 0 20px #fff;
+        }
     }
 }

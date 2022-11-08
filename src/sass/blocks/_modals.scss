@@ -1,0 +1,49 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    display: none;
+    .modal {
+        width: 382px;
+        min-height: 143px;
+        background: #F2F2F2;
+        position: relative;
+        padding: 35px 40px;
+        &__close {
+            color: $red-color;
+            font-size: 21px;
+            position: absolute;
+            right: -29px;
+            top: -7px;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover {
+                text-shadow: 3px 3px 20px #fff;
+            }
+        }
+        &__tittle {
+            font-weight: 700;
+            font-size: 18px;
+            color: #0D0D0D;
+            text-align: center;
+        }
+        &__subtittle {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: #0D0D0D;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    #thanks-modal, #consultation-modal, #buy-modal {
+        display: none;
+    }
+}

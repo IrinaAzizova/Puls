@@ -379,14 +379,45 @@
             <address class="footer__address">Нижний Новгород, ул.Кима, д.337</address>
             <a class="footer__tel" href="tel:+74999228974">8 (499) 922-89-74</a>
             <div class="footer__social">
-                <div class="footer__round"><div class="icon-facebook"></div>
-                </div>
+                <a href="https://facebook.com" target="_blank" class="footer__round"><div class="icon-facebook"></div>
+                </a>
                 <div class="footer__round"><div class="icon-instagram"></div></div>
                 <div class="footer__round"><div class="icon-pinterest"></div></div>
             </div>
-        </div>
-        
+        </div>        
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation-modal">
+            <div class="modal__close">&#10006;</div>
+            <p class="modal__tittle">Просто заполните форму заявки</p>
+            <p class="modal__subtittle">и мы перезвоним вам в течении 10 минут</p>
+            <form action="#" class="form form_consultation">
+                <input name="name" type="text" placeholder="Ваше имя">
+                <input name="tel" type="tel" placeholder="Ваш телефон">
+                <input name="email" type="email" placeholder="Ваш E-mail">
+                <button type="submit" class="btn btn_consultation">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+
+        <div class="modal" id="buy-modal">
+            <div class="modal__close">&#10006;</div>
+            <p class="modal__tittle">Ваш заказ:</p>
+            <p class="modal__subtittle">Пульсометр Polar FT1</p>
+            <form action="#" class="form form_consultation">
+                <input name="name" type="text" placeholder="Ваше имя">
+                <input name="tel" type="tel" placeholder="Ваш телефон">
+                <input name="email" type="email" placeholder="Ваш E-mail">
+                <button type="submit" class="btn btn_consultation">купить</button>
+            </form>
+        </div>
+
+        <div class="modal" id="thanks-modal">
+            <div class="modal__close">&#10006;</div>
+            <p class="modal__tittle">Спасибо за вашу заявку!</p>
+            <p class="modal__subtittle">Наш менеджер свяжется с вами  в ближайшее время!</p>
+        </div>
+    </div>
 
     <script src="js/itc-slider.js"></script>
     <script src="js/script.js"></script>
