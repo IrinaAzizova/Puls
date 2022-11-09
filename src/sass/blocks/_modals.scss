@@ -1,11 +1,39 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  .animate__fadeOut {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+  }
+  .animate__fadeIn {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+  }
+
 .overlay {
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
     top: 0;
     z-index: 20;
-    display: flex;
     justify-content: center;
     align-items:center;
     display: none;
@@ -15,6 +43,7 @@
         background: #F2F2F2;
         position: relative;
         padding: 35px 40px;
+        display: none;
         &__close {
             color: $red-color;
             font-size: 21px;
@@ -43,7 +72,7 @@
         }
     }
 
-    #thanks-modal, #consultation-modal, #buy-modal {
+    /* #thanks-modal, #consultation-modal, #buy-modal {
         display: none;
-    }
+    } */
 }

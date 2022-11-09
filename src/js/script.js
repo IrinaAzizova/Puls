@@ -41,4 +41,55 @@ document.addEventListener('DOMContentLoaded', () => {
 			tabs[i].classList.add('catalogue__tab_active');			
 		});
 	});
+
+	/* ______ modals ______ */
+	const consultationBtns = document.querySelectorAll('[data-modal="consultation"]'),
+		  buyBtns = document.querySelectorAll('[data-modal="buy"]'),
+		  overlay = document.querySelector('.overlay'),
+		  consultationModal = overlay.querySelector('#consultation-modal'),
+		  buyModal = overlay.querySelector('#buy-modal'),
+		  modalClose = overlay.querySelectorAll('.modal__close');
+
+	consultationBtns.forEach(btn => {
+		btn.addEventListener('click', (event) => {
+			event.preventDefault();
+			consultationModal.classList.add('animate__fadeIn');
+			consultationModal.classList.remove('animate__fadeOut');
+			overlay.style.display = 'flex';
+			consultationModal.style.display = 'block';			
+		});
+	});
+
+	buyBtns.forEach(btn => {
+		btn.addEventListener('click', (event) => {
+			event.preventDefault();
+			buyModal.classList.add('animate__fadeIn');
+			buyModal.classList.remove('animate__fadeOut');
+			overlay.style.display = 'flex';
+			buyModal.style.display = 'block';
+		});
+	});
+
+	modalClose.forEach(cross => {
+		cross.addEventListener('click', (event) => {
+			if (event.target.parentNode.id = 'consultation-modal') {
+				consultationModal.classList.add('animate__fadeOut');
+				consultationModal.classList.remove('animate__fadeIn');
+				
+			} else if (event.target.parentNode.id = 'buy-modal') {
+				buyModal.classList.add('animate__fadeOut');
+				buyModal.classList.remove('animate__fadeIn');
+			}
+			setTimeout(() => {
+				overlay.style.display = 'none';
+				consultationModal.style.display = 'none';
+				buyModal.style.display = 'none';
+			}, 300);
+			
+			
+			
+		});
+	});
+
+	
 });
