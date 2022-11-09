@@ -80,9 +80,9 @@
             <p class="consultation__subtittle">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
             </p>                
             <form action="#" class="form form_consultation">
-                <input name="name" type="text" placeholder="Ваше имя">
-                <input name="tel" type="tel" placeholder="Ваш телефон">
-                <input name="email" type="email" placeholder="Ваш E-mail">
+                <input name="name" type="text" placeholder="Ваше имя" required>
+                <input name="tel" type="tel" placeholder="Ваш телефон" required>
+                <input name="email" type="email" placeholder="Ваш E-mail" required>
                 <button type="submit" class="btn btn_consultation">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -159,7 +159,7 @@
                             <p class="catalogue-card__old-price">4750 руб.</p>
                             <p class="catalogue-card__new-price">4500 руб.</p>
                         </div>
-                        <button class="btn btn_catalogue-card">купить</button>
+                        <button data-modal="buy" class="btn btn_catalogue-card">купить</button>
                     </div>
                 </div>
                 <div class="catalogue-card" data-tab="run">
@@ -392,11 +392,11 @@
             <div class="modal__close">&#10006;</div>
             <p class="modal__tittle">Просто заполните форму заявки</p>
             <p class="modal__subtittle">и мы перезвоним вам в течении 10 минут</p>
-            <form action="#" class="form form_consultation">
-                <input name="name" type="text" placeholder="Ваше имя">
-                <input name="tel" type="tel" placeholder="Ваш телефон">
-                <input name="email" type="email" placeholder="Ваш E-mail">
-                <button data-modal="buy" type="submit" class="btn btn_consultation">заказать кОНСУЛЬТАЦИЮ</button>
+            <form action="#" class="form form_consultation" id="consultation-modal__form">
+                <input name="name" type="text" placeholder="Ваше имя" required>
+                <input name="tel" type="tel" placeholder="Ваш телефон" required>
+                <input name="email" type="email" placeholder="Ваш E-mail" required>
+                <button type="submit" class="btn btn_consultation">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
 
@@ -404,11 +404,11 @@
             <div class="modal__close">&#10006;</div>
             <p class="modal__tittle">Ваш заказ:</p>
             <p class="modal__subtittle">Пульсометр Polar FT1</p>
-            <form action="#" class="form form_consultation">
-                <input name="name" type="text" placeholder="Ваше имя">
-                <input name="tel" type="tel" placeholder="Ваш телефон">
-                <input name="email" type="email" placeholder="Ваш E-mail">
-                <button data-modal="buy" type="submit" class="btn btn_consultation">купить</button>
+            <form action="#" class="form form_consultation" id="buy-modal__form">
+                <input name="name" type="text" placeholder="Ваше имя" required>
+                <input name="tel" type="tel" placeholder="Ваш телефон" required>
+                <input name="email" type="email" placeholder="Ваш E-mail" required>
+                <button type="submit" class="btn btn_consultation">купить</button>
             </form>
         </div>
 
@@ -420,6 +420,8 @@
     </div>
 
     <script src="js/itc-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

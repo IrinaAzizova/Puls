@@ -39,6 +39,10 @@ a:hover {
     }
 }
 
+.error {
+    color: $red-color;
+}
+
 @import 'blocks/btns';
 @import 'blocks/forms';
 

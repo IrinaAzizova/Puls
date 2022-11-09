@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	/* _____ slider connection _____ */
@@ -91,5 +92,41 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	
+	/* _____ validation (used jQuery validate library) _____ */
+	const rules = {
+		rules: {			
+			name: {
+				required: true,
+				minlength: 2
+			},	
+			tel: {
+				required: true,
+				minlength: 11
+			},
+			email: {
+			  required: true,
+			  email: true
+			}
+		},
+		messages: {
+			name: {
+			  required: "Введите ваше имя",
+			  minlength: jQuery.validator.format("Введите минимум {0} символа!")
+			},
+			tel: {
+				required: "Введите ваш номер телефона",
+				minlength: jQuery.validator.format("Введите минимум {0} символов!")
+			},
+			email: {
+				required: "Введите ваш email-адрес",
+				email: "Введите корректный адрес"
+			}
+		  }
+	};
+
+	$('#buy-modal__form').validate(rules);
+
+	$('#consultation-modal form').validate(rules);
+	$('.consultation .form_consultation').validate(rules);
+	console.log(document.querySelector('.consultation .form_consultation'))
 });
