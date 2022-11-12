@@ -27,6 +27,21 @@
     animation-name: fadeOut;
 }
 
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .animate__fadeInUp {
+    animation: fadeInUp 1s ease 1;
+  }
+
 @keyframes hertBeat {
     from { transform: scale(1)}
     to { transform: scale(1.5); }

@@ -207,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const pageUpBtn = document.querySelector('#pageup');
 	window.addEventListener('scroll', () => {
 		if (document.documentElement.scrollTop > 1600) {
-			console.log(document.documentElement.scrollTop)
 			pageUpBtn.classList.remove('animate__fadeOut');
 			pageUpBtn.classList.add('animate__fadeIn');
 			pageUpBtn.style.display = 'block';
@@ -218,4 +217,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			
 		}
 	});
+
+
+
+	/* _____ fadeUp animation ____ */
+
+	const observer = new IntersectionObserver(entries => {
+		// перебор записей
+		entries.forEach(entry => {
+		  	// если элемент появился
+		  	if (entry.isIntersecting) {
+				// добавить ему CSS-класс
+				entry.target.classList.add('animate__fadeInUp');
+		 	}
+		});
+	});
+	document.querySelectorAll('.reviews__item').forEach(item => {
+		observer.observe(item);
+	});	  
 });
