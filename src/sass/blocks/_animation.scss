@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}.animate__fadeIn {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.animate__fadeOut {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+}
+
+@keyframes hertBeat {
+    from { transform: scale(1)}
+    to { transform: scale(1.5); }
+}
+.animate__heartBeat {
+    animation: hertBeat 2s linear infinite alternate;
+    &:hover {
+        animation-play-state: paused;
+    }
+}

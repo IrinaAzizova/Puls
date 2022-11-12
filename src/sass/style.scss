@@ -12,6 +12,10 @@ $border-radius: 5px;
     font-weight: 500;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 940px;
     margin: 0 auto;
@@ -39,10 +43,16 @@ a:hover {
     }
 }
 
-.error {
-    color: $red-color;
+#pageup {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    display: none;
 }
 
+@import 'blocks/animation';
 @import 'blocks/btns';
 @import 'blocks/forms';
 

@@ -1,10 +1,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
 	/* _____ slider connection _____ */
+
 	const slider = ItcSlider.getOrCreateInstance('.itc-slider');
 
+
 	/* _____ product card animation _____ */
+
 	const cardWrapper = document.querySelectorAll('.catalogue-card__wrapper'),
 		  moreLinks = document.querySelectorAll('.catalogue-card__more'),
 		  backLinks = document.querySelectorAll('.catalogue-card__back');
@@ -23,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+
 	/* _____ tabs _____ */
+
 	const tabs = document.querySelectorAll('.catalogue__tab'),
 		  catalogueCards = document.querySelectorAll('.catalogue-card');
 
@@ -43,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+
 	/* ______ modals ______ */
+
 	const consultationBtns = document.querySelectorAll('[data-modal="consultation"]'),
 		  buyBtns = document.querySelectorAll('[data-modal="buy"]'),
 		  overlay = document.querySelector('.overlay'),
@@ -92,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+
 	/* _____ validation (used jQuery validate library) _____ */
+
 	const rules = {
 		rules: {			
 			name: {
@@ -125,8 +135,87 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	$('#buy-modal__form').validate(rules);
-
 	$('#consultation-modal form').validate(rules);
 	$('.consultation .form_consultation').validate(rules);
-	console.log(document.querySelector('.consultation .form_consultation'))
+
+
+	/* _____ input phone mask _____ */
+
+	const phoneInputMask_var2 = (phoneInputSelector) => {
+		const eventCalllback = event => {
+			const el = event.target,
+				clearVal = el.dataset.phoneClear,
+				pattern = el.dataset.phonePattern,
+				matrix_def = "+7(___) ___-__-__",
+				matrix = pattern ? pattern : matrix_def,
+				def = matrix.replace(/\D/g, "");
+			let i = 0,
+				val = event.target.value.replace(/\D/g, "");
+	
+			if (clearVal !== 'false' && event.type === 'blur') {
+				if (val.length < matrix.match(/([\_\d])/g).length) {
+					event.target.value = '';
+					return;
+				}
+			}
+			if (def.length >= val.length) val = def;
+			event.target.value = matrix.replace(/./g, function (a) {
+				return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+			});
+		}
+	
+		const phone_inputs = document.querySelectorAll(phoneInputSelector);
+		for (let elem of phone_inputs) {
+			for (let ev of ['input', 'blur', 'focus']) {
+				elem.addEventListener(ev, eventCalllback);
+			}
+		}
+	}
+	
+	phoneInputMask_var2('input[type="tel"]');
+
+
+
+	/* _____ Sending emails from the site (used jQuery ajax()) _____ */
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+		if (!$(this).valid()) {
+			return;
+		}
+		
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#consultation-modal, #buy-modal').fadeOut();
+			$('.overlay, #thanks-modal').fadeIn('slow');
+			$('form').trigger('reset');
+			setTimeout(() => {
+				$('.overlay, #thanks-modal').fadeOut();
+			}, 3000);
+			return false;
+		});
+	});
+
+
+
+	/* _____ pageup button _____ */
+
+	const pageUpBtn = document.querySelector('#pageup');
+	window.addEventListener('scroll', () => {
+		if (document.documentElement.scrollTop > 1600) {
+			console.log(document.documentElement.scrollTop)
+			pageUpBtn.classList.remove('animate__fadeOut');
+			pageUpBtn.classList.add('animate__fadeIn');
+			pageUpBtn.style.display = 'block';
+		} else {
+			pageUpBtn.classList.add('animate__fadeIn');
+			pageUpBtn.classList.remove('animate__fadeOut');
+			pageUpBtn.style.display = 'none';
+			
+		}
+	});
 });

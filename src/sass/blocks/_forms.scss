@@ -15,8 +15,6 @@
             &:focus {
                 outline: none;
                 border: 2px solid $black-color;
-                box-shadow: 1px 1px 10px $red-color,
-                            -1px -1px 10px $red-color;
             }
         }
 

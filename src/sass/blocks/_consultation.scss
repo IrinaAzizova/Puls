@@ -8,4 +8,14 @@
         color: #FFFFFF;
         margin-top: 8px;
     }
+    label.error {
+		color: red;
+        text-shadow: 5px 5px 10px#000,
+                     -5px -5px 10px#000;
+	}
+	input.error {
+		margin-top: 5px;		
+		box-shadow: 1px 1px 10px $red-color,
+					-1px -1px 10px $red-color;
+	}
 }
