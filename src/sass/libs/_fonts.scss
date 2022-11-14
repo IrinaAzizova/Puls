@@ -2,6 +2,7 @@
 
 @font-face {
 	font-family: 'Geometria';
+  font-display: swap;
 	src: url('../fonts/Geometria/Geometria-Medium.eot');
 	src: local('Geometria Medium'), local('Geometria-Medium'),
 		url('../fonts/Geometria/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
@@ -13,6 +14,7 @@
 
 @font-face {
 	font-family: 'Geometria';
+  font-display: swap;
 	src: url('../fonts/Geometria/Geometria.eot');
 	src: local('Geometria'),
 		url('../fonts/Geometria/Geometria.eot?#iefix') format('embedded-opentype'),
@@ -24,6 +26,7 @@
 
 @font-face {
 	font-family: 'Geometria';
+  font-display: swap;
 	src: url('../fonts/Geometria/Geometria-Bold.eot');
 	src: local('Geometria Bold'), local('Geometria-Bold'),
 		url('../fonts/Geometria/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
@@ -35,6 +38,7 @@
 
 @font-face {
 	font-family: 'Geometria';
+  font-display: swap;
 	src: url('../fonts/Geometria/Geometria-Light.eot');
 	src: local('Geometria Light'), local('Geometria-Light'),
 		url('../fonts/Geometria/Geometria-Light.eot?#iefix') format('embedded-opentype'),
@@ -65,7 +69,6 @@
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
